@@ -1,0 +1,26 @@
+---
+title: "Examine Life Expectancy"
+author: "Evan Steinberg"
+date: "`r Sys.Date()"
+output: pdf_document
+urlcolor: "blue"
+---
+
+``` {r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+``` {r, message = FALSE}
+library(tidyverse)
+library(gapminder)
+```
+
+# Abstract
+
+Here, I re-examine the analysis of Oeppen and Vapel (2002).
+
+# Analysis
+
+
+
+
+
