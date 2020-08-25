@@ -9,17 +9,28 @@ urlcolor: "blue"
 ``` {r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-``` {r, message = FALSE}
-library(tidyverse)
-library(gapminder)
-```
+
 
 # Abstract
 
 Here, I re-examine the analysis of Oeppen and Vapel (2002).
 
-# Analysis
+# Life Expectancy Analysis
+``` {r}
+library(tidyverse)
+library(gapminder)
+```
 
+``` {r}
+data("gapminder_unfiltered")
+gapminder_unfiltered %>%
+  group_by(year) %>%
+  filter(lifeExp == max(lifeExp)) %>%
+  ungroup() %>%
+  select(year, country, lifeExp) %>%
+  arrange(year) ->
+  sumdat
+```
 
 
 
